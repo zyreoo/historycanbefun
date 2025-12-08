@@ -5,7 +5,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: 	#be1918;
+    background-color: #FFFFFF;
+    position: relative;
 }
 
 .main {
@@ -13,17 +14,42 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 1.5rem;
 }
 
 .title{
-    color: white;
+    color: #CC0000;
     font-family: var(--font-caveat), cursive;
     font-size: 6rem;
     font-weight: 700;
     letter-spacing: 0.05em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 
+        3px 3px 0px rgba(0, 0, 0, 0.1),
+        1px 1px 2px rgba(204, 0, 0, 0.3),
+        0 0 10px rgba(204, 0, 0, 0.2);
     margin: 0;
     line-height: 1.2;
+    text-align: center;
+}
+
+.underlined {
+    position: relative;
+    display: inline-block;
+}
+
+.underlined::after {
+    content: '';
+    position: absolute;
+    bottom: 0.1em;
+    left: -0.05em;
+    right: -0.05em;
+    height: 0.25em;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 15'%3E%3Cpath d='M0,8 Q15,3 30,7 T60,8 Q75,12 90,7 T120,8 Q135,4 150,8 T180,7 Q195,11 200,8' stroke='%23FFD700' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    opacity: 1;
+    filter: drop-shadow(0 2px 2px rgba(255, 215, 0, 0.3));
 }
 
 
@@ -41,3 +67,28 @@
   .timelineContainer::-webkit-scrollbar {
     width: 8px;
   }
+
+.dej {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    max-width: 500px;
+    max-height: 600px;
+    opacity: 0;
+    transition: opacity 0.8s ease-out;
+}
+
+.ceausescu {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    max-width: 500px;
+    max-height: 600px;
+    opacity: 0;
+    transition: opacity 0.8s ease-out;
+}
+
+.dej.showen,
+.ceausescu.showen {
+    opacity: 1;
+}

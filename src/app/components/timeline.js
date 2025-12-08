@@ -49,6 +49,27 @@ export default function Home() {
               sdfbhdsjnfsdbnjfsdjfsdbfijenfjfebjwefwf
             </p>
           </div>
+          <div
+            className={styles.timelineDiv}
+            ref={(el) => (itemRef.current[2] = el)}
+          >
+            <h3 className={styles.title}>The beginning</h3>
+            <p>
+              sahdbafdfbdshjnf nsdnh sjdnfdnhsfjndnfbhjn
+              sdfbhdsjnfsdbnjfsdjfsdbfijenfjfebjwefwf
+            </p>
+          </div>
+
+          <div
+            className={styles.timelineDiv}
+            ref={(el) => (itemRef.current[3] = el)}
+          >
+            <h3 className={styles.title}>The beginning</h3>
+            <p>
+              sahdbafdfbdshjnf nsdnh sjdnfdnhsfjndnfbhjn
+              sdfbhdsjnfsdbnjfsdjfsdbfijenfjfebjwefwf
+            </p>
+          </div>
         </div>
       </main>
     </div>
