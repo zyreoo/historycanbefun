@@ -3,6 +3,25 @@
 import styles from "./timeline.module.css";
 import { useEffect, useRef } from "react";
 
+const timelineData = [
+  {
+    title: "The beginning",
+    description: "sahdbafdfbdshjnf nsdnh sjdnfdnhsfjndnfbhjn sdfbhdsjnfsdbnjfsdjfsdbfijenfjfebjwefwf"
+  },
+  {
+    title: "The beginning",
+    description: "sahdbafdfbdshjnf nsdnh sjdnfdnhsfjndnfbhjn sdfbhdsjnfsdbnjfsdjfsdbfijenfjfebjwefwf"
+  },
+  {
+    title: "The beginning",
+    description: "sahdbafdfbdshjnf nsdnh sjdnfdnhsfjndnfbhjn sdfbhdsjnfsdbnjfsdjfsdbfijenfjfebjwefwf"
+  },
+  {
+    title: "The beginning",
+    description: "sahdbafdfbdshjnf nsdnh sjdnfdnhsfjndnfbhjn sdfbhdsjnfsdbnjfsdjfsdbfijenfjfebjwefwf"
+  }
+];
+
 export default function Home() {
   const itemRef = useRef([]);
 
@@ -28,48 +47,16 @@ export default function Home() {
     <div className={styles.page}>
       <main className={styles.main}>
         <div className={styles.timelineContainer}>
-          <div
-            className={styles.timelineDiv}
-            ref={(el) => (itemRef.current[0] = el)}
-          >
-            <h3 className={styles.title}>The beginning</h3>
-            <p>
-              sahdbafdfbdshjnf nsdnh sjdnfdnhsfjndnfbhjn
-              sdfbhdsjnfsdbnjfsdjfsdbfijenfjfebjwefwf
-            </p>
-          </div>
-
-          <div
-            className={styles.timelineDiv}
-            ref={(el) => (itemRef.current[1] = el)}
-          >
-            <h3 className={styles.title}>The beginning</h3>
-            <p>
-              sahdbafdfbdshjnf nsdnh sjdnfdnhsfjndnfbhjn
-              sdfbhdsjnfsdbnjfsdjfsdbfijenfjfebjwefwf
-            </p>
-          </div>
-          <div
-            className={styles.timelineDiv}
-            ref={(el) => (itemRef.current[2] = el)}
-          >
-            <h3 className={styles.title}>The beginning</h3>
-            <p>
-              sahdbafdfbdshjnf nsdnh sjdnfdnhsfjndnfbhjn
-              sdfbhdsjnfsdbnjfsdjfsdbfijenfjfebjwefwf
-            </p>
-          </div>
-
-          <div
-            className={styles.timelineDiv}
-            ref={(el) => (itemRef.current[3] = el)}
-          >
-            <h3 className={styles.title}>The beginning</h3>
-            <p>
-              sahdbafdfbdshjnf nsdnh sjdnfdnhsfjndnfbhjn
-              sdfbhdsjnfsdbnjfsdjfsdbfijenfjfebjwefwf
-            </p>
-          </div>
+          {timelineData.map((item, index) => (
+            <div
+              key={index}
+              className={`${styles.timelineDiv} ${index % 2 === 0 ? styles.left : styles.right}`}
+              ref={(el) => (itemRef.current[index] = el)}
+            >
+              <h3 className={styles.title}>{item.title}</h3>
+              <p>{item.description}</p>
+            </div>
+          ))}
         </div>
       </main>
     </div>
