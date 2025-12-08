@@ -1,0 +1,40 @@
+.page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: 	#be1918;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+}
+
+.timelineContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    gap: 2rem;
+}
+
+.timelineDiv {
+    flex: 1;
+    max-width: 500px;
+    opacity: 0;
+    transition: all 0.6s ease;
+    transform: translateY(40px);
+}
+
+.show{
+    opacity: 1;
+    transform: translateY(0);
+}
