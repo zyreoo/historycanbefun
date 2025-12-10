@@ -4,6 +4,7 @@ import Hero from "./components/hero";
 import Timeline from "./components/timeline"
 import Dej from "./components/dej"
 import Ceausescu from "./components/ceausescu"
+import Map from "./components/map"
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Timeline />
       <Dej />
       <Ceausescu />
+      <Map />
     </>
   );
 }
