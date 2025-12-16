@@ -42,9 +42,9 @@ const eventLocations = [
 ];
 
 const manualPositions = {
-  "Bucharest": { x: 60, y: 84 },
+  "Bucharest": { x: 60, y: 83 },
   "Iași": { x: 71, y: 31 },
-  "Timișoara": { x: 12, y: 58 },
+  "Timișoara": { x: 11, y: 57 },
   "Sibiu": { x: 38, y: 58 },
   "Cluj-Napoca": { x: 35, y: 40 }
 };

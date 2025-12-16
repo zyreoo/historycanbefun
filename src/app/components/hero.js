@@ -47,7 +47,7 @@ export default function Home() {
     <div className={styles.page}>
       <main className={styles.main}>
         <h1 className={styles.title} >The <span className={styles.underlined}>leaders</span></h1>
-        <h2 className={styles.title}>Dej vs Ceausescu</h2>
+        <h2 className={styles.title}>Dej & Ceausescu</h2>
         <img src="/gheorghegheorgiu.jpeg" className={styles.dej} ref={(el) => (itemRef.current[0] = el)}/>
         <img src={encodeURI("/Nicolae_Ceausescu.jpg")} className={styles.ceausescu} ref={(el) => (itemRef.current[1] = el)} />
         
