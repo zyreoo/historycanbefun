@@ -36,7 +36,7 @@ First, grab the code and install everything:
 
 ```bash
 # Clone this repo
-git clone <repository-url>
+git clone https://github.com/zyreoo/historycanbefun.git
 cd historycanbefun
 
 # Install all the dependencies
